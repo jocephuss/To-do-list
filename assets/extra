@@ -1,0 +1,68 @@
+// if (!taskList) {
+//     taskList = [];
+//    }
+
+//     // Store the updated task back to localStorage
+//     localStorage.setItem("nextId", JSON.stringify(taskList));
+
+//     return taskList;
+// }
+// function saveTaskIdToStorage(nextId) {
+//     localStorage.setItem('nextId', JSON.stringify(taskList));
+// }
+
+
+
+// const taskCard = $('<div>') {
+// .addClass('card project-card draggable my-3')
+// .attr('data-project-id', task.id);
+// const cardHeader = $('<div>').addClass('card-header h4').text(task.name);
+// const cardBody = $('<div>').addClass('card-body');
+// const cardDescription = $('<p>').addClass('card-text').text(task.type);
+// const cardDueDate = $('<p>').addClass('card-text').text(task.dueDate);
+// const cardDeleteBtn = $('<button>')
+// .addClass('btn btn-danger delete')
+// .text('Delete')
+// .attr('data-project-id', task.id);
+// cardDeleteBtn.on('click', handleDeleteTask);
+
+// if (task.dueDate && task.status !== 'done') {
+// const now = dayjs();
+// const taskDueDate = dayjs(task.dueDate, 'DD/MM/YYYY');
+
+// // Color coding for due dates
+// if (now.isSame(taskDueDate, 'day')) {
+//   taskCard.addClass('bg-warning text-white');
+// } else if (now.isAfter(taskDueDate)) {
+//   taskCard.addClass('bg-danger text-white');
+//   cardDeleteBtn.addClass('border-light');
+// }
+// }
+// cardBody.append(cardDescription, cardDueDate, cardDeleteBtn);
+// taskCard.append(cardHeader, cardBody);
+
+// // return card to append it 
+// return taskCard;
+// }
+
+
+// const projects = generateTaskId();
+      
+// const todoList = $('#todo-cards');
+// todoList.empty();
+
+// const inProgressList = $('#in-progress-cards');
+// inProgressList.empty();
+
+// const doneList = $('#done-cards');
+// doneList.empty();
+
+// for (let task of task) {
+//   if (task.status === 'to-do-cards') {
+//     todoList.append(createProjectCard(task));
+//   } else if (task.status === 'in-progress') {
+//     inProgressList.append(createProjectCard(task));
+//   } else if (task.status === 'done') {
+//     doneList.append(createProjectCard(task));
+//   }
+// }

@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
 
-  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="assets/style.css" />
   <title>Task Board</title>
 </head>
 
@@ -22,16 +22,44 @@
   </header>
   <div class="container">
     <div class="text-center mb-5">
-      <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#formModal">Add Task</button>
+      <button class="btn btn-success" id="task-btn" data-bs-toggle="modal" data-bs-target="#addTaskModal">Add Task</button>
     </div>
+    <!-- Modal for adding tasks -->
+<div class="modal fade" id="addTaskModal" tabindex="-1" aria-labelledby="addTaskModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addTaskModalLabel">Add Task</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="addTaskForm">
+            <div class="mb-3">
+              <label for="taskName" class="form-label">Task Name</label>
+              <input type="text" class="form-control" id="taskName" required>
+            </div>
+            <div class="mb-3">
+              <label for="taskDescription" class="form-label">Task Description</label>
+              <textarea class="form-control" id="taskDescription" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="taskDueDate" class="form-label">Due Date</label>
+              <input type="date" class="form-control" id="taskDueDate" required>
+            </div>
+            <button type="submit" class="btn btn-primary" id="taskbtn" target="#toDo">Save Task</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
     <!-- Todo: Create a modal with a form to add tasks -->
     <div class="row swim-lanes text-center justify-content-between">
-      <div class="col-12 col-lg-4 d-flex">
+      <div class="col-12 col-lg-4 d-flex" id="formInfo">
         <div id="to-do" class="card border-light mb-3 lane flex-grow-1">
           <div class="card-header bg-white">
-            <h2 class="card-title mb-1">To Do</h2>
+            <h2 class="card-title mb-1" id="to-do-cards">To Do</h2>
           </div>
-          <div class="card-body bg-light">
+          <div class="card-body bg-light" id="toDo">
             <div id="todo-cards"></div>
           </div>
         </div>
@@ -67,7 +95,7 @@
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
     integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
 
-  <script src="./assets/js/script.js"></script>
+  <script src="assets/script.js"></script>
 </body>
 
 </html>
