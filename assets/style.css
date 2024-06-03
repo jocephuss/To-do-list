@@ -9,6 +9,15 @@ body {
   
   .task-card {
     margin: 0 auto;
+    
+  }
+
+  .card {
+    z-index: 5;
+  }
+
+  .lane {
+    z-index: 0;
   }
   
   .task-card:hover {
